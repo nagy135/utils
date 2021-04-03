@@ -30,8 +30,18 @@ fn main() {
         println!("Dummy answer: {}", dummy);
     }
     {
-        let _tg = Timeguard::new("eratorsten".to_string());
+        let _tg = Timeguard::new("eratorsten 20 buffer".to_string());
+        let eratosten = primes::eratosten(1000, 20);
+        println!("Eratorsten answer: {}", eratosten);
+    }
+    {
+        let _tg = Timeguard::new("eratorsten 100 buffer".to_string());
         let eratosten = primes::eratosten(1000, 100);
+        println!("Eratorsten answer: {}", eratosten);
+    }
+    {
+        let _tg = Timeguard::new("eratorsten 100 buffer".to_string());
+        let eratosten = primes::eratosten(1000, 500);
         println!("Eratorsten answer: {}", eratosten);
     }
 }
